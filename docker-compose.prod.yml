@@ -48,3 +48,8 @@ services:
 
       ## AUTH
       - traefik.http.middlewares.auth.basicauth.usersfile=/auth/traefik.auth
+
+      ## ACME Default Certificate
+      - traefik.tls.stores.default.defaultgeneratedcert.resolver=leresolver
+#      - traefik.tls.stores.default.defaultgeneratedcert.domain.main=${TRAEFIK_DASHBORD_HOST}
+##      - traefik.tls.stores.default.defaultgeneratedcert.domain.sans=foo.example.org, bar.example.org
