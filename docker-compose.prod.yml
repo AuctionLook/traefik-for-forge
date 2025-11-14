@@ -5,7 +5,7 @@ networks:
 services:
   traefik:
     image: traefik:v3.5
-    container_name: traefik
+    container_name: ${TRAEFIK_DASHBOARD_HOST}
     restart: always
     networks:
       - web
